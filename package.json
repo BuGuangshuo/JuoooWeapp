@@ -57,10 +57,12 @@
     "@tarojs/taro": "3.6.24",
     "axios": "^1.6.7",
     "dayjs": "^1.11.10",
+    "hox": "^2.1.1",
     "lodash": "^4.17.21",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.22.3",
+    "redux": "^5.0.1",
     "taro-ui": "^3.3.0"
   },
   "devDependencies": {

@@ -1,7 +1,8 @@
 import { useLaunch } from "@tarojs/taro";
+import { SelectTabStoreProvider } from "./store/index";
 
-import "taro-ui/dist/style/index.scss";
 import "./app.scss";
+import "taro-ui/dist/style/index.scss";
 
 function App({ children }) {
   useLaunch(() => {
@@ -9,7 +10,7 @@ function App({ children }) {
   });
 
   // children 是将要会渲染的页面
-  return children;
+  return <SelectTabStoreProvider>{children}</SelectTabStoreProvider>;
 }
 
 export default App;

@@ -59,6 +59,9 @@ dependencies:
   dayjs:
     specifier: ^1.11.10
     version: 1.11.10
+  hox:
+    specifier: ^2.1.1
+    version: 2.1.1(react@18.2.0)
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
@@ -71,6 +74,9 @@ dependencies:
   react-router-dom:
     specifier: ^6.22.3
     version: 6.22.3(react-dom@18.2.0)(react@18.2.0)
+  redux:
+    specifier: ^5.0.1
+    version: 5.0.1
   taro-ui:
     specifier: ^3.3.0
     version: 3.3.0(@tarojs/components@3.6.24)(@tarojs/plugin-platform-alipay@3.6.24)(@tarojs/plugin-platform-h5@3.6.24)(@tarojs/plugin-platform-jd@3.6.24)(@tarojs/plugin-platform-qq@3.6.24)(@tarojs/plugin-platform-swan@3.6.24)(@tarojs/plugin-platform-tt@3.6.24)(@tarojs/plugin-platform-weapp@3.6.24)(@tarojs/react@3.6.24)(@tarojs/taro-rn@3.6.24)(@tarojs/taro@3.6.24)(react-dom@18.2.0)(react-native@0.73.6)(react@18.2.0)
@@ -9923,6 +9929,15 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
+  /hox@2.1.1(react@18.2.0):
+    resolution: {integrity: sha512-POOE+kzaDXGbBVvMvhKnVRADg9R6yI14/FisHA8HyqKDAPCW1Owejyt/6yvQXngQo6s4OG6DLzAznOASPAJRDw==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    dev: false
+
   /hpack.js@2.1.6:
     resolution: {integrity: sha512-zJxVehUdMGIKsRaNt7apO2Gqp0BdqW5yaiGHXXmbpvxgBYVZnAql+BJb4RO5ad2MgpbZKn5G6nMnegrH1FcNYQ==}
     dependencies:
@@ -11346,7 +11361,7 @@ packages:
       '@babel/register': 7.23.7(@babel/core@7.24.0)
       babel-core: 7.0.0-bridge.0(@babel/core@7.24.0)
       colors: 1.4.0
-      flow-parser: 0.121.0
+      flow-parser: 0.206.0
       graceful-fs: 4.2.11
       micromatch: 3.1.10
       neo-async: 2.6.2
@@ -14677,6 +14692,10 @@ packages:
       strip-indent: 3.0.0
     dev: true
 
+  /redux@5.0.1:
+    resolution: {integrity: sha512-M9/ELqF6fy8FwmkpnF0S3YKOqMyoWJ4+CS5Efg2ct3oY9daQvd/Pc71FpGZsVsbl3Cpb+IIcjBDUnnyBdQbq4w==}
+    dev: false
+
   /reflect.getprototypeof@1.0.5:
     resolution: {integrity: sha512-62wgfC8dJWrmxv44CA36pLDnP6KKl3Vhxb7PL+8+qrrFMMoJij4vgiMP8zV4O8+CBMXY1mHxI5fITGHXFHVmQQ==}
     engines: {node: '>= 0.4'}
@@ -16800,6 +16819,14 @@ packages:
     resolution: {integrity: sha512-CL/29uS74AwreI/f2oz2hLTW7ZqVeV5+gxFeGudzQrgkCytrHw33G4KbnQOrRlAEzzAFXi7dDLMC9zhWcVpzmw==}
     peerDependencies:
       react: '>=16.8'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 18.2.0
     dev: false
