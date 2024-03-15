@@ -1,3 +1,5 @@
+import { useGlobalIconFont } from './components/iconfont/helper';
+
 export default defineAppConfig({
   pages: [
     "pages/home/index",
@@ -32,4 +34,6 @@ export default defineAppConfig({
     navigationBarTitleText: "WeChat",
     navigationBarTextStyle: "black",
   },
-});
+  usingComponents: Object.assign(useGlobalIconFont()),
+}
+);

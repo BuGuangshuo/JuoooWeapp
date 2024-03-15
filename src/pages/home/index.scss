@@ -1,0 +1,163 @@
+.home {
+  width: 100%;
+  &-top-bar {
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    padding: 0 32px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-loaction {
+      display: flex;
+      align-items: center;
+
+      &-title {
+        font-weight: 600;
+      }
+
+      &-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &-search {
+      width: 510px;
+    }
+
+    &-calander {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .at-search-bar::after {
+    border: none;
+  }
+
+  &-main {
+    padding: 84px 32px 0;
+  }
+
+  &-branner-wrap {
+    border-radius: 14px;
+    border: 3px solid #ebebeb;
+  }
+
+  &-advertion-wrap {
+    padding: 32px 0px 24px 0px;
+
+    &-label {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+
+      &-item {
+        width: 20%;
+        margin-bottom: 24px;
+
+        &-column {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          &-icon {
+            width: 80px;
+            height: 80px;
+          }
+
+          &-title {
+            font-size: 26px;
+            color: #666;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+
+    &-vip-ahead {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(213, 163, 112, 0.5);
+      background-color: #fffcf5;
+
+      &-advert {
+        width: 100%;
+        height: 81px;
+        padding: 0 24px;
+        box-sizing: border-box;
+        display: flex;
+        webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+        overflow: hidden;
+
+        &-left,
+        &-right {
+          display: flex;
+          webkit-box-align: center;
+          align-items: center;
+          color: #6b4218;
+          font-size: 24px;
+
+          &-icon {
+            width: 24px;
+            width: 24px;
+            padding-right: 12px;
+          }
+        }
+
+        &-right {
+          font-size: 27px;
+        }
+      }
+
+      &-swiper {
+        padding: 0 24px;
+        height: 164px;
+
+        &-list {
+          display: flex;
+          position: relative;
+
+          & .list-left {
+            width: 110px;
+            height: 135px;
+            border-radius: 12px;
+            overflow: hidden;
+
+            & .list-left-img {
+              width: 100%;
+              height: 100%;
+              display: block;
+              vertical-align: middle;
+            }
+          }
+
+          & .list-right {
+            flex: 1;
+            margin-left: 32px;
+
+            &-tip {
+              display: block;
+              margin-top: 24px;
+              font-size: 24px;
+
+              &-time {
+                margin-right: 24px;
+                color: #ff6743 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

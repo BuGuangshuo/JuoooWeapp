@@ -1,47 +1,57 @@
 import Taro, { Component } from "@tarojs/taro";
-import { CoverView, CoverImage } from "@tarojs/components";
+import { CoverView, Text, CoverImage } from "@tarojs/components";
 import React, { useState, useEffect } from "react";
-// import Intellect from '../assets/intellect.png'
+import { useSelectTabStore } from "../store/index";
+import homeIconSelect from "../assets/icons/tabIconHomeSelected.png";
+import homeIcon from "../assets/icons/home.png";
+import theatreIcon from "../assets/icons/theatre.png";
+import theatreIconSelect from "../assets/icons/theatreActive.png";
+import ticketIcon from "../assets/icons/ticket.png";
+import ticketSelect from "../assets/icons/ticketActive.png";
+import mineIcon from "../assets/icons/mine.png";
+import mineIconSelect from "../assets/icons/mineActive.png";
+
 import "./index.scss";
 
-const CustomTabBar = (props) => {
-  const [selected, setSelect] = useState(0);
+const CustomTabBar = () => {
   const [color, setColor] = useState("#666");
   const [selectedColor, setSelectedColor] = useState("#ed6c00");
   const [list, setList] = useState([
     {
       pagePath: "/pages/home/index",
-      // iconPath: "/assets/home.png",
-      // selectedIconPath: '/assets/home-active.png',
+      iconPath: homeIcon,
+      selectedIconPath: homeIconSelect,
       text: "首页",
     },
     {
       pagePath: "/pages/Theatre/index",
-      // iconPath: "/assets/home.png",
-      // selectedIconPath: '/assets/home-active.png',
+      iconPath: theatreIcon,
+      selectedIconPath: theatreIconSelect,
       text: "剧院",
     },
     {
       pagePath: "/pages/Ticket/index",
-      // iconPath: "/assets/home.png",
-      // selectedIconPath: '/assets/home-active.png',
+      iconPath: ticketIcon,
+      selectedIconPath: ticketSelect,
       text: "票夹",
     },
     {
       pagePath: "/pages/Mine/index",
-      // iconPath: "/assets/user.png",
-      // selectedIconPath: '/assets/user-active.png',
+      iconPath: mineIcon,
+      selectedIconPath: mineIconSelect,
       text: "我的",
     },
   ]);
 
+  const { selectTab, setSeletTab } = useSelectTabStore();
+
   useEffect(() => {
-    console.log(props.ind);
-    setSelectedColor(props.ind);
-  }, []);
+    console.log(selectTab);
+  }, [selectTab]);
 
   const switchTab = (item) => {
     const url = item.pagePath;
+    setSeletTab(url);
     Taro.switchTab({
       url,
     });
@@ -63,14 +73,18 @@ const CustomTabBar = (props) => {
               data-path={item.pagePath}
               key={item.text}
             >
-              {/* <CoverImage
+              <CoverImage
                 className="tab-bar-wrap-item-icon"
-                src={selected === index ? item.selectedIconPath : item.iconPath}
-              /> */}
+                src={
+                  selectTab === item.pagePath
+                    ? item.selectedIconPath
+                    : item.iconPath
+                }
+              />
               <CoverView
                 className="tab-bar-wrap-item-btn"
                 style={{
-                  color: selected === index ? selectedColor : color,
+                  color: selectTab === item.pagePath ? selectedColor : color,
                 }}
               >
                 {item.text}
